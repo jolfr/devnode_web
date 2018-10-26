@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-color: black;
+        }
+        .projectlist {
+            margin:auto;
+            list-style: none;
+            width: 80%;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .projectlist li {
+            display: block;
+            width: 100%;
+            float: left;
+            border-bottom: 1px solid rgb(175, 175, 175);
+            border-top: 1px solid rgba(255,255,255,.2);
+        }
+
+        .topnav {
+            background: royalblue;
+            height: 30px;
+        }
+        a.nav {
+            color: white;
+            font-size: 16px;
+        }
+        .filterbar {
+            padding-left: 85px;
+            font-size: 14px;
+        }
+        h2 {
+            padding-left: 85px;
+        }
+        .italics {
+            font-style: italic;
+        }
+        .bolds {
+            font-weight: bold;
+            padding-bottom: 0px;
+        }
+        img {
+            height: 10%;
+            width: 10%;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="/myprofile" class="nav">Profile</a>
+    <a href="/projects" class="nav">Project Search</a>
+    <a href="/staff" class="nav">Staff Search</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<img src="https://preview.ibb.co/ckhb9U/Project-Pair.png" alt="logo" align="right">
+<h2>Staff Search</h2>
+<div class="filterbar">
+    <h5>Filters:            Department ▼        Skillset ▼      Duration ▼      Hours ▼</h5>
+</div>
+<ul class="projectlist">
+    <li>
+        <img src="http://samis-esic.mg/wp-content/uploads/2017/05/6140989632_1c8066563d_b.jpg" alt="businessman1" class="profile-image" align="left">
+        <p class="bolds">John Smith</p>
+        <p>Skills: Software, Customer Service, Spanish, Java, Oracle, AWS, Blockchain, Cloud Computing</p>
+        <p class="italics">For more info, click here or message John ✉ </p>
+    </li>
+    <li>
+        <img src="https://www.professionalwomanmag.com/wp-content/uploads/2018/05/business-woman.jpg" alt="businessman2" class="profile-image" align="left">
+        <p class="bolds">Jane Doe</p>
+        <p>Skills: Scala, Cloud Computing, Leadership, Time Management, Project Planning, Task Delegation</p>
+        <p class="italics">For more info, click here or message Jane ✉ </p>
+    </li>
+    <li>
+        <img src="https://investforkidschicago.org/wp-content/uploads/2017/05/Jimmy-Levin.jpg" alt="businessman3" class="profile-image" align="left">
+        <p class="bolds">Bob Jones</p>
+        <p>Skills: Team Leadership, Team Communication, Creative Thinking, Cloud Computing, Data Analytics, Programming, Mathematics</p>
+        <p class="italics">For more info, click here or message Bob ✉ </p>
+    </li>
+    <li>
+        <img src="http://samis-esic.mg/wp-content/uploads/2017/05/6140989632_1c8066563d_b.jpg" alt="businessman1" class="profile-image" align="left">
+        <p class="bolds">Acquisition of a company</p>
+        <p>For more info, contact John Smith ✉ </p>
+    </li>
+    <li></li>
+</ul>
+</body>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial;
+            font-color: black;
+        }
+        .projectlist {
+            margin:auto;
+            list-style: none;
+            width: 80%;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .projectlist li {
+            display: block;
+            width: 100%;
+            float: left;
+            border-bottom: 1px solid rgb(175, 175, 175);
+            border-top: 1px solid rgba(255,255,255,.2);
+        }
+
+        .topnav {
+            background: royalblue;
+            height: 30px;
+        }
+        a.nav {
+            color: white;
+            font-size: 16px;
+        }
+        .filterbar {
+            padding-left: 85px;
+            font-size: 14px;
+        }
+        h2 {
+            padding-left: 85px;
+        }
+        .italics {
+            font-style: italic;
+        }
+        .bolds {
+            font-weight: bold;
+            padding-bottom: 0px;
+        }
+        img {
+            height: 10%;
+            width: 10%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="/myprofile" class="nav">Profile</a>
+    <a href="/projects" class="nav">Project Search</a>
+    <a href="/staff" class="nav">Staff Search</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<img src="https://preview.ibb.co/ckhb9U/Project-Pair.png" alt="logo" align="right">
+<h2>Project Search</h2>
+<div class="filterbar">
+    <h5>Filters:            Department ▼        Skillset ▼      Duration ▼      Hours ▼</h5>
+</div>
+<ul class="projectlist">
+    <li>
+        <p class="bolds">Acquisition of a company</p>
+        <p class="italics">We performed the operative and technical due diligence. The Solon team carried out in-depth data investigations and set up interviews with the management of the acquisition target. Parallel to this, Solon set up an overlay-structure on the business model of the firm and corrected fundamental disagreements. The results of the due diligence were the basis for the consortium’s investment decisions, for the financing banks and used as valuation basis by the rating agencies.</p>
+        <p>For more info, contact John Smith ✉ </p>
+    </li>
+    <li>
+        <p class="bolds">The value of motorsports in switching pay TV operator</p>
+        <p class="italics">One of Europe’s largest pay TV operators was looking to understand the value of motorsports content rights for end-users in switching pay TV operators. To take the project one step further – they also wanted to know the value of the motorsports asset, and whether they should acquire it outright.
+        </p>
+        <p>For more info, contact Mary Jones ✉ </p>
+    </li>
+    <li>
+        <p class="bolds">Synergies in the booming Indian mobile communications market
+        </p>
+        <p class="italics">With the help of research and expert interviews, we developed a quantitative structure for the necessary expansion of Indian mobile networks – in just a few days. Based on the results, we calculated the expected savings on expenses and investments resulting from the merger of both networks.</p>
+        <p>For more info, contact Jane Doe ✉ </p>
+    </li>
+    <li><p class="bolds">Bringing IDM to the cloud
+    </p></li>
+    <li></li>
+</ul>
+</body>
+</html>
