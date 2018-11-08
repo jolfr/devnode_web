@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="462887418296-9a67ol2li3j8nr918im4m9rjejmsommn.apps.googleusercontent.com">
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
@@ -63,6 +65,11 @@
                 </div>
                 <div class="form-check">
                     <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <div>
+                    <h4>User ID</h4>
+                    <p id="user-id"></p>
                 </div>
 
             </form>
