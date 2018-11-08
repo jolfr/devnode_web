@@ -13,9 +13,3 @@ router.post('/myprofile', function(req, res) {
 });
 
 module.exports = router;
-
-function onSignIn(googleUser) {
-    var id_token = googleUser.getAuthResponse().id_token;
-    document.getElementById("user-id").innerHTML = id_token;
-
-}
