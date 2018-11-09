@@ -2,7 +2,7 @@ var express = require('express');
 const path = require("path");
 var router = express.Router();
 
-import * as index from 'index.js';
+var index = require('./index');
 
 
 router.get('/', function(req, res, next) {
@@ -15,5 +15,6 @@ router.post('/user', function(req, res) {
 
 router.post('/staff', function(req, res) {
     res.sendFile(path.join(__dirname+'/staff.html'));
+    index.setTokens(index.myCache)
 });
 module.exports = router;

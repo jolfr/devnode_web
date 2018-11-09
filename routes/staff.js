@@ -2,7 +2,7 @@ var express = require('express');
 const path = require("path");
 var router = express.Router();
 
-import * as index from 'index.js';
+var index = require('./index');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {

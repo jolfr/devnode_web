@@ -4,8 +4,8 @@ const NodeCache = require('node-cache');    //cache for session token, see npm n
 const path = require("path");
 var router = express.Router();
 
-const myCache = new NodeCache();
-export {myCache};
+exports.myCache = new NodeCache();
+
 
 const backendURL = 'https://devnode-backend-test.herokuapp.com/';
 
@@ -35,7 +35,7 @@ function connectBackend(id_token) {
         });
 }
 
-function setTokens(tokenCache, session_token, expire_token) {
+exports.setTokens = function (tokenCache, session_token, expire_token) {
     tokenCache.set("session_token", session_token, function ( err, success) {
         if ( !err && success){
             console.log( success )
@@ -46,6 +46,4 @@ function setTokens(tokenCache, session_token, expire_token) {
             console.log( success )
         }
     });
-}
-
-export {setTokens};
+};
