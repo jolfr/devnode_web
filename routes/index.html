@@ -68,13 +68,19 @@
                 </div>
                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
                 <div>
-                    <h4>User ID</h4>
+                    <p>User Token:</p>
                     <p id="user-id"></p>
+                    <p>Session Token:</p>
+                    <p id="session-id"></p>
                 </div>
                 <script>
+                    import myCache from "index";
+
                     function onSignIn(googleUser) {
                         var id_token = googleUser.getAuthResponse().id_token;
                         document.getElementById("user-id").innerHTML = id_token;
+                        connectBackend(id_token);
+                        document.getElementById("session-id").innerHTML = myCache.get("session_token");
                     }
                 </script>
 

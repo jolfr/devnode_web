@@ -1,7 +1,13 @@
 var express = require('express');
+const axios = require('axios');
+const NodeCache = require('node-cache');    //cache for session token, see npm node-cache
 const path = require("path");
 var router = express.Router();
 
+const myCache = new NodeCache();
+export {myCache};
+
+const backendURL = 'https://devnode-backend-test.herokuapp.com/';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,3 +19,33 @@ router.post('/myprofile', function(req, res) {
 });
 
 module.exports = router;
+
+function connectBackend(id_token) {
+    axios.post(backendURL + '/login/oauth/access_token?id_token=${id_token}',{
+        token: id_token
+    })
+        .then((response) => {
+            const session_token = response.data.session_token;
+            const expire_token = response.data.expire_token;
+
+            setTokens(myCache, session_token, expire_token)
+        })
+        .catch((error) => {
+            console.error(error)
+        });
+}
+
+function setTokens(tokenCache, session_token, expire_token) {
+    tokenCache.set("session_token", session_token, function ( err, success) {
+        if ( !err && success){
+            console.log( success )
+        }
+    });
+    tokenCache.set("expire_token", expire_token, function ( err, success) {
+        if ( !err && success){
+            console.log( success )
+        }
+    });
+}
+
+export {setTokens};
