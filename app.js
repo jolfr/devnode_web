@@ -21,6 +21,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use("/contactform", express.static(__dirname + '/contactform'));
+app.use("/css", express.static(__dirname + '/css'));
+app.use("/font", express.static(__dirname + '/font'));
+app.use("/ico", express.static(__dirname + '/ico'));
+app.use("/img", express.static(__dirname + '/img'));
+app.use("/js", express.static(__dirname + '/js'));
+app.use("/skins", express.static(__dirname + '/skins'));
+
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/projects', projectsRouter);
