@@ -25,6 +25,10 @@
     <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png" />
     <link rel="shortcut icon" href="../ico/favicon.png" />
 
+    <!-- Google sign in -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="462887418296-9a67ol2li3j8nr918im4m9rjejmsommn.apps.googleusercontent.com">
+
     <!-- =======================================================
       Theme Name: Flattern
       Theme URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
@@ -111,29 +115,20 @@
                             <h4 id="mySigninModalLabel">Login to your <strong>account</strong></h4>
                         </div>
                         <div class="modal-body">
-                            <form class="form-horizontal">
-                                <div class="control-group">
-                                    <label class="control-label" for="inputText">Username</label>
-                                    <div class="controls">
-                                        <input type="text" id="inputText" placeholder="Username">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label class="control-label" for="inputSigninPassword">Password</label>
-                                    <div class="controls">
-                                        <input type="password" id="inputSigninPassword" placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <button type="submit" class="btn">Sign in</button>
-                                    </div>
-                                    <p class="aligncenter margintop20">
-                                        Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
-                                    </p>
-                                </div>
-                            </form>
+                            <center>
+                                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                            </center>
                         </div>
+                        <script>
+                            function onSignIn(googleUser) {
+                                $(#mySignIn).hide();
+                                var profile = googleUser.getBasicProfile();
+                                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                                console.log('Name: ' + profile.getName());
+                                console.log('Image URL: ' + profile.getImageUrl());
+                                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                            }
+                        </script>
                     </div>
                     <!-- end signin modal -->
                     <!-- Reset Modal -->
