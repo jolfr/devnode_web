@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Token Tester</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+<div>
+    <h1>Google Token Auth Tester</h1>
+</div>
+
+<div id="signin-button" class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<div>
+    <br>
+    <p>Sign in Status: </p>
+    <p id="signedIn">Sign in not attempted</p>
+    <br>
+    <p>Token: </p>
+    <p id="idToken">No token</p>
+</div>
+
+<script>
+    /**
+     * The Sign-In client object.
+     */
+    var auth2;
+
+    /**
+     * Initializes the Sign-In client.
+     */
+    var initClient = function() {
+        gapi.load('auth2', function(){
+            /**
+             * Retrieve the singleton for the GoogleAuth library and set up the
+             * client.
+             */
+            auth2 = gapi.auth2.init({
+                client_id: '462887418296-9a67ol2li3j8nr918im4m9rjejmsommn.apps.googleusercontent.com'
+            });
+
+            // Attach the click handler to the sign-in button
+            auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
+        });
+    };
+
+    /**
+     * Handle successful sign-ins.
+     */
+    var onSuccess = function(user) {
+        document.getElementById("signedIn").innerHTML = "Sign in Successful!";
+    };
+
+    /**
+     * Handle sign-in failures.
+     */
+    var onFailure = function(error) {
+        document.getElementById("signedIn").innerHTML = "Sign in Failure!";
+        console.log(error);
+    };
+</script>
+</body>
+</html>
