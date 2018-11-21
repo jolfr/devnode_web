@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="462887418296-9a67ol2li3j8nr918im4m9rjejmsommn.apps.googleusercontent.com">
+</head>
+<body>
+<div>
+    <h1>Google Token Auth Tester</h1>
+</div>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>initClient()</script>
+
+<div>
+    <p style="font-weight: bold">Status:</p>
+    <p id="signedIn">Not Signed in</p>
+    <p style="font-weight: bold">Token:</p>
+    <p id="idToken">No token</p>
+    <p style="font-weight: bold">User ID:</p>
+    <p id="userId">No User ID</p>
+    <p style="font-weight: bold">Name:</p>
+    <p id="name">No Name</p>
+    <p style="font-weight: bold">Email:</p>
+    <p id="email">Email</p>
+</div>
+
+<script>
+    function onSignIn(googleUser) {
+        document.getElementById("signedIn").innerHTML = "Signed in!";
+        var profile = googleUser.getBasicProfile();
+        document.getElementById("idToken").innerHTML = googleUser.getAuthResponse().id_token;
+        document.getElementById("userId").innerHTML = profile.getId();
+        document.getElementById("name").innerHTML = profile.getName();
+        document.getElementById("email").innerHTML = profile.getEmail();
+    }
+</script>
+</body>
+</html>

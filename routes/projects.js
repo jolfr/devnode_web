@@ -15,6 +15,6 @@ router.post('/user', function(req, res) {
 
 router.post('/staff', function(req, res) {
     res.sendFile(path.join(__dirname+'/staff.html'));
-    index.setTokens(index.myCache)
+    index.setTokens(index.myCache); //TODO Figure out why this line was put in
 });
 module.exports = router;
