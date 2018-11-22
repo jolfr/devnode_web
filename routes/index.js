@@ -33,15 +33,14 @@ function onSignIn(googleUser) {
 }
 
 function connectBackend(id_token) {
-    var data = new FormData();
-    data.append('user_token', id_token);
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
-    xhr.setRequestHeader('Content-Type', 'form-data'); //TODO switch to urlencoded for security reasons
+    xhr.setRequestHeader('Content-Type', 'x-www-form-urlencoded'); //TODO switch to urlencoded for security reasons
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
     };
+    data = JSON.stringify({'user_token': id_token})
     console.log(data);
     xhr.send(data);
 }
