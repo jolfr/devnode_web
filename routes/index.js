@@ -2,6 +2,8 @@ var express = require('express');
 const NodeCache = require('node-cache');    //cache for session token, see npm node-cache
 const path = require("path");
 
+var FormData = require('form-data');
+
 var router = express.Router();
 
 exports.myCache = new NodeCache();
@@ -31,6 +33,8 @@ function onSignIn(googleUser) {
 }
 
 function connectBackend(id_token) {
+    var data = new FormData();
+    data.append('user_token', id_token);
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
@@ -38,9 +42,7 @@ function connectBackend(id_token) {
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
     };
-    json = JSON.stringify({ user_token: id_token});
-    console.log(json);
-    xhr.send(json);
+    xhr.send(data);
 }
 
 exports.setTokens = function (tokenCache, session_token, expire_token) {
