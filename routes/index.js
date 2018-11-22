@@ -26,7 +26,7 @@ function onSignIn(googleUser) {
 
     var id_token = googleUser.getAuthResponse().id_token;
     console.log('User Token: ' + id_token);
-    connectBackend('token');
+    connectBackend(id_token);
     $("#mySignin").modal("hide");
 }
 
