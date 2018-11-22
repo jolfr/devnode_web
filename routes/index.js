@@ -1,6 +1,8 @@
 var express = require('express');
 const NodeCache = require('node-cache');    //cache for session token, see npm node-cache
 const path = require("path");
+
+const FormData = require('form-data');
 var formData = new FormData();
 
 var router = express.Router();
