@@ -2,11 +2,10 @@ var express = require('express');
 const NodeCache = require('node-cache');    //cache for session token, see npm node-cache
 const path = require("path");
 
-var FormData = require('form-data');
-
 var router = express.Router();
 
 exports.myCache = new NodeCache();
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -30,19 +29,19 @@ function onSignIn(googleUser) {
     console.log('User Token: ' + id_token);
     connectBackend(id_token);
     $("#mySignin").modal("hide");
+
 }
 
 function connectBackend(id_token) {
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
+    console.log(backendURL);
+    xhr.open('POST', backendURL);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
     };
-    data = JSON.stringify({'user_token': id_token})
-    console.log(data);
-    xhr.send(data);
+    xhr.send(JSON.stringify({ user_token: id_token}));
 }
 
 exports.setTokens = function (tokenCache, session_token, expire_token) {
@@ -57,3 +56,13 @@ exports.setTokens = function (tokenCache, session_token, expire_token) {
         }
     });
 };
+
+function disconnectBackend(session_token) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://127.0.0.1:8000/login');
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = function () {
+        console.log('Signed in as: ' + xhr.responseText);
+    }
+}
+
