@@ -38,7 +38,9 @@ function connectBackend(id_token) {
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
     };
-    xhr.send('user_token=' + id_token);
+    json = JSON.stringify({ user_token: id_token});
+    console.log(json);
+    xhr.send();
 }
 
 exports.setTokens = function (tokenCache, session_token, expire_token) {
