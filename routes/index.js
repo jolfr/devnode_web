@@ -36,6 +36,7 @@ function connectBackend(id_token) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
     };
