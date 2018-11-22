@@ -1,14 +1,10 @@
 var express = require('express');
-const axios = require('axios');
 const NodeCache = require('node-cache');    //cache for session token, see npm node-cache
 const path = require("path");
 
 var router = express.Router();
 
 exports.myCache = new NodeCache();
-
-
-const backendURL = 'https://devnode-backend-test.herokuapp.com/';
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -21,19 +17,28 @@ router.post('/myprofile', function(req, res) {
 
 module.exports = router;
 
-function connectBackend(id_token) {
-    axios.post(backendURL + '/login/oauth/access_token?id_token=${id_token}',{
-        token: id_token
-    })
-        .then((response) => {
-            const session_token = response.data.session_token;
-            const expire_token = response.data.expire_token;
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-            setTokens(myCache, session_token, expire_token)
-        })
-        .catch((error) => {
-            console.error(error)
-        });
+    var id_token = googleUser.getAuthResponse().id_token;
+    console.log('User Token: ' + id_token);
+    connectBackend('token');
+    $("#mySignin").modal("hide");
+}
+
+function connectBackend(id_token) {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onload = function() {
+        console.log('Signed in as: ' + xhr.responseText);
+    };
+    xhr.send('user_token=' + id_token);
 }
 
 exports.setTokens = function (tokenCache, session_token, expire_token) {

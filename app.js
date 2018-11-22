@@ -29,6 +29,7 @@ app.use("/ico", express.static(__dirname + '/ico'));
 app.use("/img", express.static(__dirname + '/img'));
 app.use("/js", express.static(__dirname + '/js'));
 app.use("/skins", express.static(__dirname + '/skins'));
+app.use("/routes", express.static(__dirname + '/routes'));
 
 app.use('/', indexRouter);
 app.use('/user', userRouter);
