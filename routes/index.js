@@ -36,7 +36,6 @@ function connectBackend(id_token) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
-    xhr.setRequestHeader('Content-Type', 'x-www-form-urlencoded'); //TODO switch to urlencoded for security reasons
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
     };
