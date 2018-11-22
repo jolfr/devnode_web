@@ -38,10 +38,11 @@ function connectBackend(id_token) {
 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.setRequestHeader('Content-Type', 'form-data'); //TODO switch to urlencoded for security reasons
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
     };
+    console.log(data);
     xhr.send(data);
 }
 
