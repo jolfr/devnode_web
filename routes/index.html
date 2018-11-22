@@ -29,6 +29,9 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="462887418296-9a67ol2li3j8nr918im4m9rjejmsommn.apps.googleusercontent.com">
 
+    <!-- Import .js -->
+    <script type="text/javascript" src="../routes/index.js"></script>
+
     <!-- =======================================================
       Theme Name: Flattern
       Theme URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
@@ -119,15 +122,6 @@
                                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
                             </center>
                         </div>
-                        <script>
-                            function onSignIn(googleUser) {
-                                var profile = googleUser.getBasicProfile();
-                                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                                console.log('Name: ' + profile.getName());
-                                console.log('Image URL: ' + profile.getImageUrl());
-                                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-                            }
-                        </script>
                     </div>
                     <!-- end signin modal -->
                     <!-- Reset Modal -->
