@@ -71,6 +71,7 @@
                         <ul>
                             <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i> Sign up</a></li>
                             <li><a href="#mySignin" data-toggle="modal">Sign in</a></li>
+                            <li><a href="#" onclick="disconnectBackend()" data-toggle="modal">Sign in</a></li>
                         </ul>
                     </div>
                     <!-- Signup Modal -->
@@ -114,7 +115,7 @@
                     <!-- Sign in Modal -->
                     <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <button id="loginButton"type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                             <h4 id="mySigninModalLabel">Login to your <strong>account</strong></h4>
                         </div>
                         <div class="modal-body">

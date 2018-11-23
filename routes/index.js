@@ -35,8 +35,7 @@ function onSignIn(googleUser) {
 function connectBackend(id_token) {
 
     var xhr = new XMLHttpRequest();
-    console.log(backendURL);
-    xhr.open('POST', backendURL);
+    xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/login');
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function() {
         console.log('Signed in as: ' + xhr.responseText);
@@ -59,10 +58,10 @@ exports.setTokens = function (tokenCache, session_token, expire_token) {
 
 function disconnectBackend(session_token) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://127.0.0.1:8000/login');
+    xhr.open('POST', 'https://devnode-backend-test.herokuapp.com/logout');
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function () {
-        console.log('Signed in as: ' + xhr.responseText);
+        console.log('Successfully logged out');
     }
 }
 
