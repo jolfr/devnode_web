@@ -4,6 +4,19 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Image from '../components/image'
 
+
+import Animate from '../../css/animate.css'
+import Bootstrap from '../../css/bootstrap.css'
+import BootstrapResponsive from '../../css/bootstrap-responsive.css'
+import CSlider from '../../css/cslider.css'
+import CustomFonts from '../../css/custom-fonts.css'
+import FlexSlider from '../../css/flexslider.css'
+import FontAwesome from '../../css/font-awesome.css'
+import JCarousel from '../../css/jcarousel.css'
+import Overwrite from '../../css/overwrite.css'
+import SlitSlider from '../../css/slitslider.css'
+import Style from '../../css/style.css'
+
 const IndexPage = () => (
     <Layout>
         <div id="wrapper">
