@@ -22,10 +22,10 @@
  */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../../web/src/font/fontawesome/fontawesome-webfont.eot?v=3.0.1');
-  src: url('../../web/src/font/fontawesome/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
-    url('../../web/src/font/fontawesome/fontawesome-webfont.woff?v=3.0.1') format('woff'),
-    url('../../web/src/font/fontawesome/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  src: url('../public/font/fontawesome/fontawesome-webfont.eot?v=3.0.1');
+  src: url('../public/font/fontawesome/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('../public/font/fontawesome/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('../public/font/fontawesome/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -33,7 +33,7 @@
     ------------------------------------------------------- */
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: FontAwesome;
+  font-family: FontAwesome, serif;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -45,9 +45,7 @@
   height: auto;
   line-height: normal;
   vertical-align: baseline;
-  background-image: none;
-  background-position: 0% 0%;
-  background-repeat: repeat;
+  background: none repeat 0 0;
   margin-top: 0;
 }
 /* more sprites.less reset */
