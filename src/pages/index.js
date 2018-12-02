@@ -16,17 +16,10 @@ import Theme from '../../css/skins/devnode.css'
 
 const IndexPage = () => (
     <Layout>
+        <div>
+            <img className='advertisement' src="./img/advertisement.jpg" alt="Advertisement" />
+        </div>
         <div id="wrapper">
-            <section id="featured">
-                {/* start slider */}
-                {/* Slider */}
-                <div id='nivo-slider'>
-                    <div>
-                        <img src="./img/advertisement.jpg" alt="Advertisement" />
-                    </div>
-                </div>
-                {/* end slider */}
-            </section>
             <section className="callaction">
                 <div className="container">
                     <div className="row">

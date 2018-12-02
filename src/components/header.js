@@ -124,11 +124,7 @@ const Header = () => (
                               <nav>
                                   <ul className="nav topnav">
                                       <li className="dropdown active">
-                                          <a href="index.html">Home <i className="icon-angle-down"/></a>
-                                          <ul className="dropdown-menu">
-                                              <li><a href="index-alt2.html">Homepage 2</a></li>
-                                              <li><a href="index-alt3.html">Homepage 3</a></li>
-                                          </ul>
+                                        <Link to="index.html">Home</Link>
                                       </li>
                                       <li className="dropdown">
                                           <a href="#">Features <i className="icon-angle-down"/></a>

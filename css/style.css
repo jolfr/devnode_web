@@ -68,6 +68,11 @@ a:active {
 2. layout
 ==================================== */
 
+.advertisement {
+  position: center;
+  width: 100%;
+}
+
 .container {
   padding: 0 20px 0 20px;
   position: relative;
@@ -446,6 +451,7 @@ select.selectmenu {
 
 #nivo-slider {
   position: relative;
+  width: 100%;
 }
 
 #featured #nivo-slider .row, #featured #nivo-slider .row-fluid {
@@ -454,6 +460,7 @@ select.selectmenu {
 
 .nivo-slider {
   background: #fbfbfb;
+  width: 100%;
 }
 
 .slides {
