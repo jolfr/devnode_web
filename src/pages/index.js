@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 
 import Animate from '../../css/animate.css'
 import Bootstrap from '../../css/bootstrap.css'
@@ -21,50 +20,9 @@ const IndexPage = () => (
             <section id="featured">
                 {/* start slider */}
                 {/* Slider */}
-                <div id="nivo-slider">
-                    <div className="nivo-slider">
-                        {/* Slide #1 image */}
-                        <img src="../img/slides/nivo/bg-1.jpg" alt="" title="#caption-1" />
-                        {/* Slide #2 image */}
-                        <img src="../img/slides/nivo/bg-2.jpg" alt="" title="#caption-2" />
-                        {/* Slide #3 image */}
-                        <img src="../img/slides/nivo/bg-3.jpg" alt="" title="#caption-3" />
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="span12">
-                                {/* Slide #1 caption */}
-                                <div className="nivo-caption" id="caption-1">
-                                    <div>
-                                        <h2>Awesome <strong>features</strong></h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet nsectetuer nec Vivamus. Curabitu laoreet amet eget. Viurab oremd ellentesque ameteget. Lorem ipsum dolor sit amet nsectetuer nec vivamus.
-                                        </p>
-                                        <a href="#" className="btn btn-theme">Read More</a>
-                                    </div>
-                                </div>
-                                {/* Slide #2 caption */}
-                                <div className="nivo-caption" id="caption-2">
-                                    <div>
-                                        <h2>Fully <strong>responsive</strong></h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet nsectetuer nec Vivamus. Curabitu laoreet amet eget. Viurab oremd ellentesque ameteget. Lorem ipsum dolor sit amet nsectetuer nec vivamus.
-                                        </p>
-                                        <a href="#" className="btn btn-theme">Read More</a>
-                                    </div>
-                                </div>
-                                {/* Slide #3 caption */}
-                                <div className="nivo-caption" id="caption-3">
-                                    <div>
-                                        <h2>Very <strong>customizable</strong></h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet nsectetuer nec Vivamus. Curabitu laoreet amet eget. Viurab oremd ellentesque ameteget. Lorem ipsum dolor sit amet nsectetuer nec vivamus.
-                                        </p>
-                                        <a href="#" className="btn btn-theme">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div id='nivo-slider'>
+                    <div>
+                        <img src="./img/advertisement.jpg" alt="Advertisement" />
                     </div>
                 </div>
                 {/* end slider */}
@@ -270,36 +228,6 @@ const IndexPage = () => (
                         <div className="span12">
                             <h4>Very satisfied <strong>clients</strong></h4>
                             <ul id="mycarousel" className="jcarousel-skin-tango recent-jcarousel clients">
-                                <li>
-                                    <a href="#">
-                                        <img src="../img/dummies/clients/client1.png" className="client-logo" alt="" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="../img/dummies/clients/client2.png" className="client-logo" alt="" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="../img/dummies/clients/client3.png" className="client-logo" alt="" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="../img/dummies/clients/client4.png" className="client-logo" alt="" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="../img/dummies/clients/client5.png" className="client-logo" alt="" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="../img/dummies/clients/client6.png" className="client-logo" alt="" />
-                                    </a>
-                                </li>
                                 <li>
                                     <a href="#">
                                         <img src="../img/dummies/clients/client1.png" className="client-logo" alt="" />

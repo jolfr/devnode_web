@@ -16,6 +16,7 @@ import Style from '../../css/style.css'
 
 
 import Header from './header'
+import Footer from './footer'
 
 
 const Layout = ({ children }) => (
@@ -40,18 +41,18 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header />
+        <Header/>
         <div>
           {children}
         </div>
-
+        <Footer/>
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
 export default Layout

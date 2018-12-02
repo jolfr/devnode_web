@@ -466,7 +466,7 @@ select.selectmenu {
 }
 
 .nivoSlider, .nivo-slider {
-  position: relative;
+  position: center;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -474,7 +474,7 @@ select.selectmenu {
 }
 
 .nivo-slider img {
-  position: absolute;
+  position: center;
   top: 0px;
   left: 0px;
   max-width: none;
