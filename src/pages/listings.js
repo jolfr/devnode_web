@@ -41,8 +41,8 @@ const boldStyle = {
 };
 
 const imgStyle = {
-    height: '20%',
-    width: '20%'
+    height: '25%',
+    width: '25%'
 };
 
 const profileImageStyle = {
@@ -57,7 +57,7 @@ const ListingsPage = () => (
         </head>
         <body style={bodyStyle}>
         <div class="filterbar" style={filterBarStyle}>
-            <h6>Filters:            Department ▼        Skillset ▼      Duration ▼      Hours ▼</h6>
+            <p style={boldStyle}>Filters:            Department ▼        Skillset ▼      Duration ▼      Hours ▼</p>
         </div>
         <div>
             <ul style={liStyle}>
@@ -79,13 +79,16 @@ const ListingsPage = () => (
                 </li>
                 <li style={liStyle}>
                     <img style={imgStyle} src="./img/freelancer-logo.png" alt="freelancer" class="profile-image" align="left"/>
-                    <p style={boldStyle}>Bob Jones</p>
-                    <p>Skills: Team Leadership, Team Communication, Creative Thinking, Cloud Computing, Data Analytics, Programming, Mathematics</p>
+                    <p style={boldStyle}>Web Automation Data Entry Expert</p>
+                    <p>Description: Developer needs to create a web automation program to perform input process to fill up a specific University enrolling page automatically!</p>
+                    <p>Required Skills: Data Scraping, Python, Web Scraping, Website Design</p>
                     <p style={italicStyle}>Click here to message ✉ </p>
                 </li>
                 <li style={liStyle}>
                     <img style={imgStyle} src="./img/toptal-logo.png" alt="freelancer" class="profile-image" align="left"/>
-                    <p style={boldStyle}>Acquisition of a company</p>
+                    <p style={boldStyle}>Data Entry Automation</p>
+                    <p>Description: Developer needed to automate manual entry of accounting data</p>
+                    <p>Required Skills: SQL, Python</p>
                     <p style={italicStyle}>Click here to message ✉ </p>
                 </li>
                 <li style={liStyle}/>
