@@ -127,7 +127,7 @@ const Header = () => (
                                             <Link to="index.html">Home</Link>
                                         </li>
                                         <li className="dropdown">
-                                            <Link to="profile">Profile</Link>
+                                            <Link to="">Profile</Link>
                                         </li>
                                         <li className="dropdown">
                                             <Link to="listings">Listings</Link>

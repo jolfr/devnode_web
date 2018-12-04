@@ -14,8 +14,10 @@
     "gatsby-transformer-sharp": "^2.1.8",
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
+    "react-cardstack": "^1.1.0",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-virtualized": "^9.21.0"
   },
   "keywords": [
     "gatsby"
@@ -26,7 +28,8 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "gatsby build"
   },
   "devDependencies": {
     "prettier": "^1.15.2"
